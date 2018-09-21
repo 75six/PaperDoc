@@ -1,0 +1,138 @@
+
+新增分类
+访问方式：POST 
+接口名称：/tech-data-setting/addCategory
+
+请求报文：
+{
+	"name":"名字",                       //分类名称
+	"parentId":1,						//分类父id
+	
+}
+
+返回报文：
+{
+	"code":0,
+	"msg":"成功",
+	"data":{
+	"id" : 1                             /分类id
+	}
+}
+
+编辑分类
+访问方式：POST
+接口名称：/tech-data-setting/updateCategory
+
+请求报文：
+{
+	"name":"名字",                       //分类名称
+	"parentId":1,						//分类父id
+}
+
+返回报文：
+{
+	"code":0,
+	"msg":"成功",
+	"data":{
+	"id" : 1                             /分类id
+	}
+}
+返回报文：
+
+{
+	"questionId":1,			//题目id
+	"question":"题目题干1",
+	"type":1,				//题型id
+	"difficulty":1,			//难度id
+	"knowledgeTitle":"知识点名称1",
+	"optionList":[
+		{
+			"id":1,			//主键
+			"questionId":1, //试题编号
+			"option":"选项1",
+			"optionNo":1,	//选项序列号no
+			"isCorrect":1,	//是否准确答案
+			"createdUser":"创建人",
+			"createdTime":"创建时间",
+			"updatedUser":"更新人",
+			"updatedTime":"更新时间",
+			"isDeleted":1	//是否删除：0否，1是
+		},
+		{
+			"id":2,			//主键
+			"questionId":1, //试题编号
+			"option":"选项2",
+			"optionNo":2,	//选项序列号no
+			"isCorrect":0,	//是否准确答案
+			"createdUser":"创建人",
+			"createdTime":"创建时间",
+			"updatedUser":"更新人",
+			"updatedTime":"更新时间",
+			"isDeleted":0	//是否删除：0否，1是
+		}
+	]
+}
+
+查询分类详情
+访问方式：GET	
+接口名称：/tech-data-setting/getCategoryInfoById 
+
+请求报文：
+{
+	"id":1,                       //分类id
+
+}
+返回报文：
+{
+	"code":0,
+	"msg":"成功",
+	"data":{
+    "id":1,                               //分类id
+	"name":"名字",                       //分类名称
+	"parentId":1,						//分类父id
+}
+}
+
+
+查询分类列表
+访问方式：GET	
+接口名称：/tech-data-setting/getCategoryList
+
+请求报文：
+{
+	"id":1,                       //分类id
+
+}
+返回报文：
+{
+	"code":0,
+	"msg":"成功",
+	"data":[
+	{
+		"id":1,                               //分类id
+		"name":"名字",                       //分类名称
+		"parentId":0,						//分类父id
+	},
+	{
+		"id":2,                               //分类id
+		"name":"名字1",                       //分类名称
+		"parentId":1,						//分类父id
+	},
+	{
+		"id":3,                               //分类id
+		"name":"名字2",                       //分类名称
+		"parentId":1,						 //分类父id
+	}
+	]
+}
+
+
+
+
+
+
+
+
+
+
+
