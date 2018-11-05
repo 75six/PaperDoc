@@ -6,7 +6,7 @@
 
 请求方式：POST
 
-描述：![1539339188078](C:\Users\ZHANGH~1\AppData\Local\Temp\1539339188078.png)
+描述：![1539568989687](C:\Users\ZHANGH~1\AppData\Local\Temp\1539568989687.png)
 
 请求报文：
 
